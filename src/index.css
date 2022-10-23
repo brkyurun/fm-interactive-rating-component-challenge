@@ -27,6 +27,7 @@ body {
   padding: 0 2rem;
 }
 
+/* Rating Card Styles */
 .card {
   background: linear-gradient(
     to top,
@@ -107,6 +108,28 @@ button[type="submit"]:hover {
   background-color: var(--white);
   color: var(--orange);
   cursor: pointer;
+}
+
+/* Thanks Card Styles */
+div.card > * {
+  text-align: center;
+}
+
+.illustration-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+div.card .selection-report {
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--orange);
+  margin: 0 auto;
+  padding: 0.5rem 1.25rem 0.25rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 2rem;
 }
 
 .attribution {

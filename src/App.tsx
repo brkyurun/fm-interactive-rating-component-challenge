@@ -6,7 +6,7 @@ const mockRatings = ["1", "2", "3", "4", "5"];
 function App() {
   return (
     <>
-      <Card ratings={mockRatings} />
+      <Card ratings={mockRatings} variant="ratingCard" />
       <div className="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
