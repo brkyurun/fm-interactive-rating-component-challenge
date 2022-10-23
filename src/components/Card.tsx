@@ -1,6 +1,6 @@
 import { FormEvent } from "react";
-import star from "../../public/icon-star.svg";
-import illustration from "../../public/illustration-thank-you.svg";
+import star from "../assets/icon-star.svg";
+import illustration from "../assets/illustration-thank-you.svg";
 
 interface ICardProps {
   ratings: string[];
