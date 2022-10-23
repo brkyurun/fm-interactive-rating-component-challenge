@@ -1,18 +1,25 @@
+import { FormEvent } from "react";
 import star from "../../public/icon-star.svg";
 import illustration from "../../public/illustration-thank-you.svg";
 
 interface ICardProps {
   ratings: string[];
+  selectedRating: number | null;
   variant: "ratingCard" | "thanksCard";
+  onClick: (rating: string | number) => void;
+  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
 
 export function Card({
   ratings,
+  selectedRating,
   variant = "ratingCard",
+  onClick,
+  onSubmit,
 }: ICardProps): JSX.Element {
   if (variant === "ratingCard") {
     return (
-      <form className="card">
+      <form className="card" onSubmit={onSubmit}>
         <div className="star-wrapper">
           <img src={star} alt="" />
         </div>
@@ -24,7 +31,13 @@ export function Card({
         <ul className="ratings-wrapper">
           {Array.isArray(ratings) &&
             ratings.map((rating) => (
-              <li className="rating" key={rating}>
+              <li
+                className={
+                  selectedRating === +rating ? "rating selected" : "rating"
+                }
+                key={rating}
+                onClick={() => onClick(rating)}
+              >
                 {rating}
               </li>
             ))}
@@ -38,7 +51,9 @@ export function Card({
         <div className="illustration-wrapper">
           <img src={illustration} alt="" />
         </div>
-        <p className="selection-report">You selected 4 out of 5</p>
+        <p className="selection-report">
+          You selected {selectedRating} out of 5
+        </p>
         <h1>Thank you!</h1>
         <p>
           We appreciate you taking the time to give a rating. If you ever need
