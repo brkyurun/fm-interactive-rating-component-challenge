@@ -1,12 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Card } from "./components/Card";
 
-function App() {
-  const [count, setCount] = useState(0);
+const mockRatings = ["1", "2", "3", "4", "5"];
 
+function App() {
   return (
-    <div className="App">
-      <Card />
+    <>
+      <Card ratings={mockRatings} />
       <div className="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
@@ -14,7 +14,7 @@ function App() {
         </a>
         . Coded by <a href="https://www.github.com/brkyurun">Berkay Urun</a>.
       </div>
-    </div>
+    </>
   );
 }
 
