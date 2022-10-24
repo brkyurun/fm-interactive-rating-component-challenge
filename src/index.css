@@ -27,6 +27,12 @@ body {
   padding: 0 2rem;
 }
 
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Rating Card Styles */
 .card {
   background: linear-gradient(
@@ -133,6 +139,7 @@ div.card .selection-report {
   border-radius: 2rem;
 }
 
+/* Attribution Styles */
 .attribution {
   font-size: 11px;
   text-align: center;
