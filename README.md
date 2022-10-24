@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/brkyurun/fm-interactive-rating-component-challenge/tree/main)
+- Live Site URL: [GitHub Pages Deployment](https://brkyurun.github.io/fm-interactive-rating-component-challenge/)
 
 ## My process
 
